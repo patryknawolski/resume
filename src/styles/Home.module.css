@@ -8,7 +8,7 @@
 }
 
 .container {
-  max-width: 50rem;
+  max-width: 56rem;
   /* temporary */
   margin-left: 48px;
 }
@@ -33,10 +33,30 @@
   bottom: -2px;
 }
 
-.eploymentHistoryTitleGrid {
+.employment {
+  margin: 3rem 0;
+}
+
+.employmentProject {
+  margin: 2rem 0;
+}
+
+.employmentProjectTitle {
+  margin: 1.5rem 0;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+  font-weight: 100;
+}
+
+.employmentHistoryTitleGrid {
   display: grid;
   grid-template-columns: 300px 1fr;
   grid-column-gap: 30px;
+}
+
+.employmentStackList {
+  font-size: 0.875rem;
 }
 
 .noMargin {

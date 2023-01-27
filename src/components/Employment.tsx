@@ -4,8 +4,10 @@ export type EmploymentProps = {
   startDate: string;
   endDate?: string;
   title: string;
+  intro?: string | Array<string>;
   responsibilities: Array<string>;
   projects: Array<{
+    title?: string;
     description: string | Array<string>;
     stack: Array<string>;
   }>;
@@ -15,11 +17,12 @@ export const Employment: React.FC<EmploymentProps> = ({
   startDate,
   endDate,
   title,
+  intro,
   responsibilities,
   projects,
 }) => (
-  <>
-    <div className={styles.eploymentHistoryTitleGrid}>
+  <div className={styles.employment}>
+    <div className={styles.employmentHistoryTitleGrid}>
       <div className={styles.textUnderscored}>
         <p className={styles.noMargin}>
           {startDate} — {endDate ?? "Present"}
@@ -29,6 +32,13 @@ export const Employment: React.FC<EmploymentProps> = ({
         <p className={styles.noMargin}>{title}</p>
       </div>
     </div>
+    <>
+      {intro
+        ? (intro === "string" ? [intro] : (intro as Array<string>)).map(
+            (text) => <p>{text}</p>
+          )
+        : null}
+    </>
     <h3>Responsibilities</h3>
     <ul>
       {responsibilities.map((responsibility) => (
@@ -36,45 +46,24 @@ export const Employment: React.FC<EmploymentProps> = ({
       ))}
     </ul>
     <h3>Projects</h3>
-    {projects.map(({ description, stack }) => (
-      <>
+    {projects.map(({ title, description, stack }) => (
+      <div className={styles.employmentProject}>
+        <h4 className={styles.employmentProjectTitle}>
+          <span className={styles.textUnderscored}>{title}</span>
+        </h4>
         {(description === "string"
           ? [description]
           : (description as Array<string>)
         ).map((text) => (
           <p>{text}</p>
         ))}
-        <h3>Stack</h3>
-        <ul>
+        <h5>Technology Stack</h5>
+        <ul className={styles.employmentStackList}>
           {stack.map((stackItem) => (
             <li>{stackItem}</li>
           ))}
         </ul>
-      </>
+      </div>
     ))}
-    <p>
-      The second project that I had a pleasure to work in was already existing,
-      working platform that allows users to manage, agregate and compare social
-      media records (for now Facebook and Instagram posts).
-    </p>
-    <p>
-      The funny part is that it was Vue project and... I have never been using
-      Vue before. It's even funnier that it was not so challenging at all. Vue
-      nowadays is so similar in concepts to React that you can easily jump from
-      one to another.
-    </p>
-    <p>
-      My tasks there were connected with adding new features, refactoring
-      existing spaghetticode and proposing UX upgrades to the client.
-    </p>
-    <h3>Stack</h3>
-    <ul>
-      <li>Vue</li>
-      <li>vue-router</li>
-      <li>firebase</li>
-      <li>stripe.js</li>
-      <li>chart.js</li>
-      <li>Bootstrap</li>
-    </ul>
-  </>
+  </div>
 );
