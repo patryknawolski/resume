@@ -1,9 +1,65 @@
 import Head from "next/head";
-import Image from "next/image";
-// import { Inter } from "@next/font/google";
 import styles from "@/styles/Home.module.css";
+import { Employment, EmploymentProps } from "@/components/Employment";
 
-// const inter = Inter({ subsets: ["latin"] });
+const IdegoGroupProps: EmploymentProps = {
+  startDate: "September 2019",
+  endDate: "March 2021",
+  title: "Senior Front End Developer, Idego Group, Gdynia",
+  responsibilities: [
+    "Creation of new single page applications",
+    "Maintenance of existing projects",
+    "Teaching less experienced developers",
+    "Lightning talks",
+  ],
+  projects: [
+    {
+      description: [
+        `The first project that I was engaged in Idego was a greenfield one (I had
+            to build it from scratch). It was a platform that offers tools for
+            browsing and viewing reports, analyzes and last but not least - ratings of
+            companies prepared by analysts hired by that platform.`,
+        `The most challenging thing at the beginning was choosing the designs -
+            because we haven't had designers onboard and needed as good UX as possible
+            I aimed for some proven UI library. After many researches and comparisons
+            we were convinced to use material-ui.`,
+      ],
+      stack: [
+        "React",
+        "Storybook",
+        "Redux",
+        "redux-saga",
+        "react-router",
+        "formik",
+        "lodash",
+        "material-ui",
+        "styled-components",
+        "Java/Python",
+      ],
+    },
+    {
+      description: [
+        `The second project that I had a pleasure to work in was already existing,
+        working platform that allows users to manage, agregate and compare social
+        media records (for now Facebook and Instagram posts).`,
+        `The funny part is that it was Vue project and... I have never been using
+        Vue before. It's even funnier that it was not so challenging at all. Vue
+        nowadays is so similar in concepts to React that you can easily jump from
+        one to another.`,
+        `My tasks there were connected with adding new features, refactoring
+        existing spaghetticode and proposing UX upgrades to the client.`,
+      ],
+      stack: [
+        "Vue",
+        "vue-router",
+        "firebase",
+        "stripe.js",
+        "chart.js",
+        "Bootstrap",
+      ],
+    },
+  ],
+};
 
 export default function Home() {
   return (
@@ -19,14 +75,6 @@ export default function Home() {
         />
       </Head>
       <main className={styles.container}>
-        {/* <img
-          // className={styles.logo}
-          src="/PN.svg"
-          alt="Patryk Nawolski"
-          // width={180}
-          // height={37}
-          // priority
-        /> */}
         <section>
           <h2>About me</h2>
           <p>
@@ -64,84 +112,8 @@ export default function Home() {
         </section>
         <section>
           <h2>Employment history</h2>
-          <div className={styles.eploymentHistoryTitleGrid}>
-            <div className={styles.textUnderscored}>
-              <p className={styles.noMargin}>September 2019 — Present</p>
-            </div>
-            <div className={styles.textUnderscored}>
-              <p className={styles.noMargin}>
-                Front End Developer, Idego Group, Gdynia
-              </p>
-            </div>
-          </div>
-          <h3>Responsibilities</h3>
-          <ul>
-            <li>Creation of new single page applications</li>
-            <li>Maintenance of existing projects</li>
-            <li>Teaching less experienced developers</li>
-            <li>Lightning talks</li>
-          </ul>
-          <h3>Projects</h3>
-          <p>
-            The first project that I was engaged in Idego was a greenfield one
-            (I had to build it from scratch). It was a platform that offers
-            tools for browsing and viewing reports, analyzes and last but not
-            least - ratings of companies prepared by analysts hired by that
-            platform.
-          </p>
-          <p>
-            The most challenging thing at the beginning was choosing the designs
-            - because we haven't had designers onboard and needed as good UX as
-            possible I aimed for some proven UI library. After many researches
-            and comparisons we were convinced to use material-ui.
-          </p>
-          <h3>Stack</h3>
-          <ul>
-            <li>React</li>
-            <li>Storybook</li>
-            <li>Redux</li>
-            <li>redux-saga</li>
-            <li>react-router</li>
-            <li>formik </li>
-            <li>lodash</li>
-            <li>material-ui</li>
-            <li>styled-components</li>
-            <li>Java/Python on back end</li>
-          </ul>
-          <p>
-            The second project that I had a pleasure to work in was already
-            existing, working platform that allows users to manage, agregate and
-            compare social media records (for now Facebook and Instagram posts).
-          </p>
-          <p>
-            The funny part is that it was Vue project and... I have never been
-            using Vue before. It's even funnier that it was not so challenging
-            at all. Vue nowadays is so similar in concepts to React that you can
-            easily jump from one to another.
-          </p>
-          <p>
-            My tasks there were connected with adding new features, refactoring
-            existing spaghetticode and proposing UX upgrades to the client.
-          </p>
-          <h3>Stack</h3>
-          <ul>
-            <li>Vue</li>
-            <li>vue-router</li>
-            <li>firebase</li>
-            <li>stripe.js</li>
-            <li>chart.js</li>
-            <li>Bootstrap</li>
-          </ul>
+          <Employment {...IdegoGroupProps} />
         </section>
-        {/* <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-        <Image src="/thirteen.svg" alt="13" width={40} height={31} priority /> */}
       </main>
     </>
   );
