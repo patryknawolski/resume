@@ -129,6 +129,66 @@ const IdegoGroupProps: EmploymentProps = {
   ],
 };
 
+const NetguruProps: EmploymentProps = {
+  startDate: "October 2016",
+  endDate: "September 2019",
+  title: "Front End Developer & Team Leader, Netguru, Poznań",
+  intro: [
+    "When I joined Netguru as a middle-skilled engineer I was mainly focused on developing my technical skills, but after some time I started managing projects and people then changed my role to a 7-people team leader.",
+  ],
+  responsibilities: [
+    "working on numerous SPAs (single page applications) with both React and Angular (mainly React)",
+    "consulting",
+    "mentorship of new developers",
+    "teaching less experienced developers",
+    "presenting at conferences",
+    "leading 7-people team of front-end developers",
+  ],
+};
+
+const AnalogFolkProps: EmploymentProps = {
+  startDate: "May 2016",
+  endDate: "September 2016",
+  title: "Front End Developer, AnalogFolk, London",
+  intro: [
+    "Since my first trip to Berlin as a 15-years old kid, I decided to add living in another country to my bucket list. So when I gained skills that allowed me to find a job with a salary that'll let me live in London without any monetary support from other sources, I moved in and spent an amazing time in this creative, multicultural interactive agency that among others, had run campaigns for Nike or Sony Playstation.",
+  ],
+  responsibilities: [
+    "creating beautiful business websites with lots of interactive animations",
+    "maintenance of existing websites",
+    "learning AngularJS in all of my free time",
+    "during my time here I've also managed to create an internal app for managing employees' skills and quickly finding people with relevant skills that are right for particular job.",
+  ],
+};
+
+const YSLABProps: EmploymentProps = {
+  startDate: "July 2015",
+  endDate: "April 2016",
+  title: "Front End Developer, YSLAB, Warsaw",
+  intro: ["My first job in a professional interactive agency."],
+  responsibilities: [
+    "coding PSDs to HTML",
+    "much jQuery solutions and animations",
+    "front-end for magento shops",
+    "work with CMS (Contao, October)",
+    "cooperation with web designer and back-end developer",
+    "teaching interns",
+  ],
+};
+
+const MlodziNiewyspaniProps: EmploymentProps = {
+  startDate: "April 2015",
+  endDate: "June 2015",
+  title: "Junior Front End Developer, MłodziNiewyspani, Mińsk Mazowiecki",
+  intro: [
+    "My first front-end developer job. Did you know that it took me just 2 months of learning to get it? I started with zero knowledge about programming at all. That was quick!",
+  ],
+  responsibilities: [
+    "coding PSDs to HTML",
+    "designing and coding simple company websites and landing pages",
+  ],
+};
+
 export default function Home() {
   return (
     <>
@@ -182,6 +242,10 @@ export default function Home() {
           <h2>Employment history</h2>
           <Employment {...SoftMakerProps} />
           <Employment {...IdegoGroupProps} />
+          <Employment {...NetguruProps} />
+          <Employment {...AnalogFolkProps} />
+          <Employment {...YSLABProps} />
+          <Employment {...MlodziNiewyspaniProps} />
         </section>
       </main>
     </>

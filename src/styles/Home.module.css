@@ -51,8 +51,9 @@
 
 .employmentHistoryTitleGrid {
   display: grid;
-  grid-template-columns: 300px 1fr;
-  grid-column-gap: 30px;
+  grid-template-columns: 20rem 1fr;
+  grid-column-gap: 2rem;
+  white-space: nowrap;
 }
 
 .employmentStackList {

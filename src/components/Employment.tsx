@@ -6,7 +6,7 @@ export type EmploymentProps = {
   title: string;
   intro?: string | Array<string>;
   responsibilities: Array<string>;
-  projects: Array<{
+  projects?: Array<{
     title?: string;
     description: string | Array<string>;
     stack: Array<string>;
@@ -45,25 +45,29 @@ export const Employment: React.FC<EmploymentProps> = ({
         <li>{responsibility}</li>
       ))}
     </ul>
-    <h3>Projects</h3>
-    {projects.map(({ title, description, stack }) => (
-      <div className={styles.employmentProject}>
-        <h4 className={styles.employmentProjectTitle}>
-          <span className={styles.textUnderscored}>{title}</span>
-        </h4>
-        {(description === "string"
-          ? [description]
-          : (description as Array<string>)
-        ).map((text) => (
-          <p>{text}</p>
+    {projects ? (
+      <>
+        <h3>Projects</h3>
+        {projects.map(({ title, description, stack }) => (
+          <div className={styles.employmentProject}>
+            <h4 className={styles.employmentProjectTitle}>
+              <span className={styles.textUnderscored}>{title}</span>
+            </h4>
+            {(description === "string"
+              ? [description]
+              : (description as Array<string>)
+            ).map((text) => (
+              <p>{text}</p>
+            ))}
+            <h5>Technology Stack</h5>
+            <ul className={styles.employmentStackList}>
+              {stack.map((stackItem) => (
+                <li>{stackItem}</li>
+              ))}
+            </ul>
+          </div>
         ))}
-        <h5>Technology Stack</h5>
-        <ul className={styles.employmentStackList}>
-          {stack.map((stackItem) => (
-            <li>{stackItem}</li>
-          ))}
-        </ul>
-      </div>
-    ))}
+      </>
+    ) : null}
   </div>
 );
