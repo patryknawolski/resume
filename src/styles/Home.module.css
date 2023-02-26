@@ -8,9 +8,9 @@
 }
 
 .container {
-  max-width: 56rem;
   /* temporary */
-  margin-left: 48px;
+  max-width: 56rem;
+  margin-left: 4rem;
 }
 
 .textLight {
@@ -33,20 +33,12 @@
   bottom: -2px;
 }
 
-.employment {
-  margin: 3rem 0;
+.employment:not(:last-child) {
+  margin-bottom: 2rem;
 }
 
 .employmentProject {
-  margin: 2rem 0;
-}
-
-.employmentProjectTitle {
   margin: 1.5rem 0;
-  font-size: 16px;
-  text-transform: uppercase;
-  letter-spacing: 0.25rem;
-  font-weight: 100;
 }
 
 .employmentHistoryTitleGrid {
@@ -185,4 +177,5 @@
   content: '';
   position: absolute;
   z-index: -1;
-} */
+}
+*/

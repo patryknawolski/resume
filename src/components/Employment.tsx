@@ -50,7 +50,7 @@ export const Employment: React.FC<EmploymentProps> = ({
         <h3>Projects</h3>
         {projects.map(({ title, description, stack }) => (
           <div className={styles.employmentProject}>
-            <h4 className={styles.employmentProjectTitle}>
+            <h4>
               <span className={styles.textUnderscored}>{title}</span>
             </h4>
             {(description === "string"

@@ -100,7 +100,7 @@ body {
 }
 
 section {
-  margin: 5rem 0;
+  margin: 3rem 0;
 }
 
 a {
@@ -109,7 +109,7 @@ a {
 }
 
 h2 {
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: 100;
   margin: 1.5rem 0;
   text-transform: uppercase;
@@ -118,6 +118,14 @@ h2 {
 
 h3 {
   font-size: 1.25rem;
+  font-weight: 100;
+  margin: 1.5rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+}
+
+h4 {
+  font-size: 1.125rem;
   font-weight: 100;
   margin: 1.5rem 0;
   text-transform: uppercase;
