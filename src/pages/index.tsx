@@ -296,6 +296,21 @@ export default function Home() {
           </p>
         </section>
         <section>
+          <h2>Reasons to hire me</h2>
+          <ul>
+            <li>
+              ✔ I communicate on every step of the development to meet your
+              expectations with high quality and well-tested product.
+            </li>
+            <li>✔ I am flexible with my working hours.</li>
+            <li>
+              ✔ I have a great passion for learning and I’m following the latest
+              development standards.
+            </li>
+            <li>✔ I always meet the deadline.</li>
+          </ul>
+        </section>
+        <section>
           <h2>Employment history</h2>
           <Employment {...FreelancerProps} />
           <Employment {...SoftMakerProps} />
