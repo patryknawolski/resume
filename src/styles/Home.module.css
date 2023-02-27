@@ -17,22 +17,6 @@
   font-weight: 100;
 }
 
-.textUnderscored {
-  position: relative;
-}
-
-.textUnderscored::before {
-  pointer-events: none;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-  position: absolute;
-  content: "";
-  height: 1px;
-  background-color: #231f20;
-  width: 100%;
-  bottom: -2px;
-}
-
 .employment:not(:last-child) {
   margin-bottom: 2rem;
 }

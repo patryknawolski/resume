@@ -24,12 +24,12 @@ export const Employment: React.FC<EmploymentProps> = ({
 }) => (
   <div className={styles.employment}>
     <div className={styles.employmentHistoryTitleGrid}>
-      <div className={styles.textUnderscored}>
+      <div className="u-textUnderscored">
         <p className={styles.noMargin}>
           {startDate} — {endDate ?? "Present"}
         </p>
       </div>
-      <div className={styles.textUnderscored}>
+      <div className="u-textUnderscored">
         <p className={styles.noMargin}>{title}</p>
       </div>
     </div>
@@ -52,7 +52,7 @@ export const Employment: React.FC<EmploymentProps> = ({
         {projects.map(({ title, description, stack }) => (
           <div className={styles.employmentProject}>
             <h4>
-              <span className={styles.textUnderscored}>{title}</span>
+              <span className="u-textUnderscored">{title}</span>
             </h4>
             {(description === "string"
               ? [description]

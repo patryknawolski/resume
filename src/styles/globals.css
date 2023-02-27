@@ -152,8 +152,36 @@ li:not(:last-child) {
   margin-bottom: 0.5rem;
 }
 
+.u-strong {
+  font-weight: 700;
+}
+
 .u-pointer {
   cursor: pointer;
+}
+
+.u-link {
+  color: var(--color-blue);
+}
+
+.u-textUnderscored {
+  position: relative;
+}
+
+.u-textUnderscored::before {
+  pointer-events: none;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  position: absolute;
+  content: "";
+  height: 1px;
+  background-color: #231f20;
+  width: 100%;
+  bottom: -2px;
+}
+
+.u-textNoWrap {
+  white-space: nowrap;
 }
 
 /* @media (prefers-color-scheme: dark) {

@@ -14,7 +14,7 @@ const FreelancerProps: EmploymentProps = {
       <>
         <Popover
           trigger={
-            <span className={`${styles.textUnderscored} u-pointer`}>
+            <span className={`u-strong u-pointer u-link`}>
               100% job success rating
             </span>
           }
@@ -30,9 +30,7 @@ const FreelancerProps: EmploymentProps = {
         and a{" "}
         <Popover
           trigger={
-            <span className={`${styles.textUnderscored} u-pointer`}>
-              top rated badge
-            </span>
+            <span className={`u-strong u-pointer u-link`}>top rated badge</span>
           }
           content={
             <Image
@@ -44,7 +42,12 @@ const FreelancerProps: EmploymentProps = {
           }
         />
       </>,
-      `, then constantly worked on my credibility, then hired four more people and helped develop or run 14 different projects with perfect feedback in most of them.`,
+      <>
+        , then constantly worked on my credibility, then hired four more people
+        and helped develop or run{" "}
+        {<span className="u-strong u-textNoWrap">14 different projects</span>}{" "}
+        with perfect feedback in most of them.
+      </>,
     ],
   ],
   responsibilities: [
@@ -270,7 +273,7 @@ export default function Home() {
           <p>
             I'd never copy and paste existing code without abstracting it
             somehow to make the code reusable.{" "}
-            <strong className={`${styles.textUnderscored} ${styles.textLight}`}>
+            <strong className={`u-textUnderscored ${styles.textLight}`}>
               I'm a developer - not a coder
             </strong>
             . I will not only produce code to implement features described by a
@@ -278,19 +281,26 @@ export default function Home() {
             or even business solutions if I get any ideas.
           </p>
           <p>
-            <strong className={`${styles.textUnderscored} ${styles.textLight}`}>
+            <strong className={`u-textUnderscored ${styles.textLight}`}>
               Let's make your app great together!
             </strong>
           </p>
 
           <p>
             Contact:{" "}
-            <a href="mailto: patryknawolski@gmail.com">
+            <a
+              className="u-link u-strong"
+              href="mailto: patryknawolski@gmail.com"
+            >
               patryknawolski@gmail.com
             </a>
             <br />
             LinkedIn:{" "}
-            <a href="https://www.linkedin.com/in/patryk-nawolski-400389ab/">
+            <a
+              className="u-link u-strong"
+              href="https://www.linkedin.com/in/patryk-nawolski-400389ab/"
+              target="_blank"
+            >
               https://www.linkedin.com/in/patryk-nawolski-400389ab/
             </a>
           </p>
