@@ -1,9 +1,42 @@
 import Head from "next/head";
 import styles from "@/styles/Home.module.css";
 import { Employment, EmploymentProps } from "@/components/Employment";
+import Image from "next/image";
+
+const FreelancerProps: EmploymentProps = {
+  startDate: "November 2021",
+  title: "Front End Developer, React Consultant, Project Manager",
+  intro: [
+    `After working in so many companies, I decided to try running my own business and became a freelancer, mainly using UpWork platform as a middleware to connect me with clients.`,
+    [
+      `I quickly gained a `,
+      <>
+        <span className={styles.textUnderscored}>100% job success rating</span>{" "}
+        and a <span className={styles.textUnderscored}>top rated badge</span>
+      </>,
+      `, then constantly worked on my credibility, then hired four more people and helped develop or run 14 different projects with perfect feedback in most of them.`,
+    ],
+    <Image
+      src="/upwork-credit.png"
+      alt="Upwork account credit info"
+      width={332}
+      height={158}
+    />,
+  ],
+  responsibilities: [
+    "Programming",
+    "Managing projects and people",
+    "Planning",
+    "Onboarding new developers",
+    "Mentoring",
+    "Finding new contracts",
+    "Keeping relationships with clients",
+  ],
+};
 
 const SoftMakerProps: EmploymentProps = {
   startDate: "March 2021",
+  endDate: "November 2021",
   title: "Frontend Tech Lead, SoftMaker, Warsaw",
   intro: [
     `I have joined SoftMaker as the main person responsible for front end development, I quickly took it to the next level by introducing TypeScript, Storybook, styled-system, pull request flow and other technologies/practices to developers and designers.`,
@@ -240,6 +273,7 @@ export default function Home() {
         </section>
         <section>
           <h2>Employment history</h2>
+          <Employment {...FreelancerProps} />
           <Employment {...SoftMakerProps} />
           <Employment {...IdegoGroupProps} />
           <Employment {...NetguruProps} />

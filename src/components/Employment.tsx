@@ -1,10 +1,11 @@
 import styles from "@/styles/Home.module.css";
+import { ReactNode } from "react";
 
 export type EmploymentProps = {
   startDate: string;
   endDate?: string;
   title: string;
-  intro?: string | Array<string>;
+  intro?: ReactNode | Array<ReactNode> | Array<Array<ReactNode>>;
   responsibilities: Array<string>;
   projects?: Array<{
     title?: string;
