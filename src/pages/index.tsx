@@ -2,6 +2,7 @@ import Head from "next/head";
 import styles from "@/styles/Home.module.css";
 import { Employment, EmploymentProps } from "@/components/Employment";
 import Image from "next/image";
+import { Popover } from "@/components/Popover";
 
 const FreelancerProps: EmploymentProps = {
   startDate: "November 2021",
@@ -11,17 +12,40 @@ const FreelancerProps: EmploymentProps = {
     [
       `I quickly gained a `,
       <>
-        <span className={styles.textUnderscored}>100% job success rating</span>{" "}
-        and a <span className={styles.textUnderscored}>top rated badge</span>
+        <Popover
+          trigger={
+            <span className={`${styles.textUnderscored} u-pointer`}>
+              100% job success rating
+            </span>
+          }
+          content={
+            <Image
+              src="/upwork-credit.png"
+              alt="Upwork account credit info"
+              width={332}
+              height={158}
+            />
+          }
+        />{" "}
+        and a{" "}
+        <Popover
+          trigger={
+            <span className={`${styles.textUnderscored} u-pointer`}>
+              top rated badge
+            </span>
+          }
+          content={
+            <Image
+              src="/upwork-credit.png"
+              alt="Upwork account credit info"
+              width={332}
+              height={158}
+            />
+          }
+        />
       </>,
       `, then constantly worked on my credibility, then hired four more people and helped develop or run 14 different projects with perfect feedback in most of them.`,
     ],
-    <Image
-      src="/upwork-credit.png"
-      alt="Upwork account credit info"
-      width={332}
-      height={158}
-    />,
   ],
   responsibilities: [
     "Programming",

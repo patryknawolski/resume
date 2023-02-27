@@ -146,6 +146,10 @@ li:not(:last-child) {
   margin-bottom: 0.5rem;
 }
 
+.u-pointer {
+  cursor: pointer;
+}
+
 /* @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
